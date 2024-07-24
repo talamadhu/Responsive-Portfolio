@@ -26,6 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -59,7 +60,7 @@ h1 {
 }
 
 main {
-    padding-top: 50px;
+    padding-top: 100px; /* Adjusted for fixed header */
 }
 
 .home {
@@ -87,10 +88,11 @@ main {
     font-size: 2.5em;
 }
 
-.content h4{
+.content h4 {
     margin-top: 10px;
-    font-weight: 700px;
+    font-weight: 700;
 }
+
 .content h4 span {
     color: #ffd700; /* Yellow color */
 }
@@ -139,6 +141,12 @@ main {
     transition: .3s;
 }
 
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 /* About */
 
 .about {
@@ -170,19 +178,21 @@ main {
 
 .MadhuDP {
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .MadhuDP img {
     width: 400px;
     height: auto;
+    border-radius: 50%; /* Optional for a circular profile image */
 }
 
-/Education/
+/* Education */
 
 .education {
     padding: 100px 50px;
     background-color: rgba(0, 0, 0, 0.7);
-    margin-top: px;
+    margin-top: 150px;
 }
 
 .education h2 {
@@ -190,7 +200,6 @@ main {
     color: #ffd700;
     text-align: center;
     margin-bottom: 25px;
-    margin-top: 150px;
 }
 
 .year-container {
@@ -227,12 +236,6 @@ main {
     margin-bottom: 5px;
 }
 
-
-
-
-
-
-
 /* Skills */
 
 .skills {
@@ -244,14 +247,13 @@ main {
     padding: 20px;
 }
 
-.toggle-btn{
+.toggle-btn {
     position: absolute;
     left: 47%;
     font-size: 20px;
 }
 
-
-.skill{
+.skill {
     padding-left: 120px;
 }
 
@@ -354,6 +356,8 @@ button:hover {
     color: #000;
 }
 
+/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     header {
         padding: 20px;
@@ -382,9 +386,19 @@ button:hover {
     form {
         width: 100%;
     }
-}
 
-.social-icons{
-    position: absolute;
-    left: 47%;
+    .skill, .certifications {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle-btn {
+        position: static;
+        margin: 20px 0;
+    }
 }
